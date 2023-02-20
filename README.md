@@ -1,2 +1,2 @@
 # Criar-Site-WordPress-Redhat.
-Este script em shell assembly obtém o endereço IP externo de uma instância do Google Cloud Platform usando a API de metadados, e o exibe na saída padrão.
+Este script automatiza a configuração de um servidor web completo para hospedagem de um site WordPress em um ambiente Red Hat.
