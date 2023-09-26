@@ -5,7 +5,7 @@
 # https://cloud.google.com/compute/docs/instances/create-start-instance
 sleep 0.05
 
-# 2. Instale o software necessário
+# 2. Instalando o software necessário
 sleep 0.05
 sudo yum update -y
 sleep 0.05
@@ -24,19 +24,19 @@ sleep 0.05
 sudo yum install mariadb-server mariadb -y
 sleep 0.05
 
-# 3. Configure HTTPS e HTTP/2
+# 3. Configurar HTTPS e HTTP/2
 # Script para instalar certbot e configurar certificado SSL no NGINX:
 # https://certbot.eff.org/instructions
 sleep 0.05
 
-# Adicione as seguintes linhas ao arquivo de configuração do NGINX para ativar o HTTP/2:
+# Adicionando as seguintes linhas ao arquivo de configuração do NGINX para ativar o HTTP/2:
 sleep 0.05
 sudo sed -i '/listen 80 default_server;/a\        listen 443 ssl http2;' /etc/nginx/nginx.conf
 sleep 0.05
 sudo sed -i '/listen 443 ssl http2;/a\        ssl_protocols TLSv1.2 TLSv1.3;' /etc/nginx/nginx.conf
 sleep 0.05
 
-# 4. Instale o WordPress
+# 4. Instalar o WordPress
 sleep 0.05
 wget https://wordpress.org/latest.tar.gz
 sleep 0.05
@@ -59,6 +59,5 @@ sleep 0.05
 sudo systemctl restart nginx
 sleep 0.05
 
-# 5. Teste o seu site
-# Acesse o seu site usando um navegador para testar se tudo está funcionando corretamente.
-# Parabéns, seu site WordPress usando "Redhat 7, NGINX+PHP 7.4+MariaDB 10.5+https+http2" agora está em funcionamento!
+
+# WordPress usando "Redhat 7, NGINX+PHP 7.4+MariaDB 10.5+https+http2"!
